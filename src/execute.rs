@@ -36,8 +36,9 @@ where
             name: msg.name,
             symbol: msg.symbol,
         };
+        let whitevec = vec!["hello"];
         let white_list = WhiteList {
-            addresses: map_validate(deps.api, &msg.white_list)?,
+            addresses: map_validate(deps.api, &whitevec)?,
         };
         let admin = Addr::unchecked(_info.sender);
 

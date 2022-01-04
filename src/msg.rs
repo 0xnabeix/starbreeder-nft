@@ -13,7 +13,7 @@ pub struct InstantiateMsg {
     /// Number of NFT tokens mintable
     pub max_tokens: u64,
     /// Whitelisted addresses for presale
-    pub white_list: Vec<String>,
+    // pub white_list: Vec<String>,
     /// Minting Fee (in uluna)
     pub minting_fee: Uint128,
 
