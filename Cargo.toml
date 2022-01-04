@@ -43,7 +43,7 @@ optimize = """docker run --rm -v "$(pwd)":/code \
 cw0 = { version = "0.9.1" }
 cw2 = "0.8.1"
 cw20 = { version = "0.9.1" }
-cw721 = { path = "../../packages/cw721", version = "0.9.2" }
+cw721 = { path = "./packages/cw721", version = "0.9.2" }
 cosmwasm-storage = { version = "0.16.0" }
 cw-storage-plus = "0.8.0"
 schemars = "0.8.3"
