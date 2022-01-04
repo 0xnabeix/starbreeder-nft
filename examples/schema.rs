@@ -3,8 +3,8 @@ use std::fs::create_dir_all;
 
 use cosmwasm_schema::{export_schema, remove_schemas, schema_for};
 
-use starbreeder_nft::msg::{CountResponse, ExecuteMsg, InstantiateMsg, QueryMsg};
-use starbreeder_nft::state::State;
+use starbreeder_nft::msg::{MinterResponse, MintMsg, ExecuteMsg, InstantiateMsg, QueryMsg};
+use cw721::{ContractInfoResponse, CustomMsg, Cw721, Expiration};
 
 fn main() {
     let mut out_dir = current_dir().unwrap();
@@ -13,8 +13,7 @@ fn main() {
     remove_schemas(&out_dir).unwrap();
 
     export_schema(&schema_for!(InstantiateMsg), &out_dir);
-    export_schema(&schema_for!(ExecuteMsg), &out_dir);
+    export_schema(&schema_for!(MinterResponse), &out_dir);
+    export_schema(&schema_for!(MintMsg), &out_dir);
     export_schema(&schema_for!(QueryMsg), &out_dir);
-    export_schema(&schema_for!(State), &out_dir);
-    export_schema(&schema_for!(CountResponse), &out_dir);
 }
