@@ -13,11 +13,6 @@ pub enum Cw721QueryMsg {
         /// unset or false will filter out expired approvals, you must set to true to see them
         include_expired: Option<bool>,
     },
-
-    /// Return operator that can access all of the owner's tokens.
-    /// Return type: `ApprovedResponse`
-    Approved { owner: String, operator: String },
-
     /// List all operators that can access all of the owner's tokens.
     /// Return type: `ApprovedForAllResponse`
     ApprovedForAll {
@@ -77,11 +72,6 @@ pub struct Approval {
     pub spender: String,
     /// When the Approval expires (maybe Expiration::never)
     pub expires: Expiration,
-}
-
-#[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
-pub struct ApprovedResponse {
-    pub approval: Approval,
 }
 
 #[derive(Serialize, Deserialize, Clone, PartialEq, JsonSchema, Debug)]
