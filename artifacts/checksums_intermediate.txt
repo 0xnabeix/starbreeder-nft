@@ -1,0 +1,1 @@
+78984c68abfbc3efcd23a99f69074242753e8e98eeaecc1d59dd73defd6dd07d  ./target/wasm32-unknown-unknown/release/starbreeder_nft.wasm
